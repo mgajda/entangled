@@ -34,6 +34,7 @@ defaultLanguages :: [Language]
 defaultLanguages =
     [ Language "C++"         ["cpp", "c++"]               "// ------" ""     cppLineDirective
     , Language "C"           ["c"]                        "// ------" ""     cppLineDirective
+    , Language "Dhall"       ["dhall"]                    "-- ------" ""     noLineDirective
     , Language "D"           ["d"]                        "// ------" ""     noLineDirective
     , Language "Rust"        ["rust"]                     "// ------" ""     noLineDirective
     , Language "Haskell"     ["hs", "haskell"]            "-- ------" ""     haskellLineDirective
@@ -41,6 +42,7 @@ defaultLanguages =
     , Language "Julia"       ["jl", "julia"]              "## ------" ""     noLineDirective
     , Language "JavaScript"  ["js", "javascript", "ecma", "json"] "// ------" ""     noLineDirective
     , Language "TypeScript"  ["ts", "typescript"]         "// ------" ""     noLineDirective
+    , Language "PureScript"  ["purs", "purescript", "pure"]  "-- ------" ""  noLineDirective
     , Language "Haxe"        ["hx", "haxe"]               "// ------" ""     noLineDirective
     , Language "Clojure"     ["clj", "cljs", "clojure"]   ";; ------" ""     noLineDirective
     , Language "Scheme"      ["scm", "scheme"]            ";; ------" ""     noLineDirective
@@ -55,6 +57,7 @@ defaultLanguages =
     , Language "OpenCL"      ["opencl"]                   "// ------" ""     cppLineDirective
     , Language "Idris"       ["idris"]                    "-- ------" ""     noLineDirective
     , Language "SQLite"      ["sqlite"]                   "-- ------" ""     noLineDirective
+    , Language "Toml"        ["toml"]                     "## ------" ""     noLineDirective
     ]
 
 cppLineDirective :: LineDirective
