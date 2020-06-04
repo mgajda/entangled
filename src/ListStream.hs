@@ -39,7 +39,7 @@ instance (Eq a, Ord a, Show a) => Stream (ListStream a) where
     showTokens Proxy = show
     -- ~\~ end
     -- ~\~ begin <<lit/a3-megaparsec.md|list-stream-methods>>[4]
-    reachOffset offset state@PosState{..} = (sourcePos, repr, state')
+    reachOffset offset state@PosState{..} = (repr, state')
         where sourcePos = offsetSourcePos (offset - pstateOffset) pstateSourcePos
               input     = ListStream $ drop (offset - pstateOffset) (unListStream pstateInput)
               repr      = maybe "<end of stream>" show $ headMaybe $ unListStream input
